@@ -1,0 +1,230 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.header {
+    height: 70px;
+    width: 100%;
+    position: relative;
+    background-color: #354457;
+}
+
+.header span {
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    left: 80px;
+}
+
+.logo {
+    width: 300px;
+    padding-left: 20px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 14px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    position: absolute;
+    top: 10px;
+}
+
+.content {
+    overflow: hidden;
+    min-width: 700px;
+}
+
+.content .left-menu {
+    width: 170px;
+    height: 100%;
+    background-color: #d1d1d1;
+    font-size: 14px;
+    float: left;
+    font-weight: 500;
+}
+
+.left-menu dt,
+.left-menu dd {
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 0;
+    font-size: 20px;
+    color: #2c68a5;
+}
+
+.left-menu dt {
+    text-align: center;
+    font-weight: bold;
+    margin: 25px 0px;
+    color: rgb(63, 212, 37);
+    font-family: 'STXingwei';
+    font-size: 40px;
+}
+
+.left-menu dd {
+    border: 1px black solid;
+    cursor: pointer;
+    background-color: rgb(192, 188, 196);
+    text-align: center;
+}
+
+.left-menu dd a {
+    text-decoration: none;
+    color: #2c68a5;
+    display: inline-block;
+    width: 100%;
+}
+
+#load a {
+    color: #000000;
+    font-size: 30px;
+    background-color: #81b2f1;
+    font-weight: 700;
+}
+
+.left-menu dd:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #354457;
+}
+
+.right-content {
+    float: left;
+    width: calc(100% - 170px);
+    min-width: 500px;
+    height: 100%;
+    background-color: #eee;
+}
+
+
+/* .right-content>div {
+    display: none;
+} */
+
+
+/* .right-content div.content-active {
+    display: block;
+} */
+
+
+/* .right-content table {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+} */
+
+table thead tr {
+    background-color: #e3e8ee;
+    color: #646987;
+    height: 30px;
+}
+
+table tbody {
+    background-color: #fff;
+}
+
+.container {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 375px;
+}
+
+.inputt {
+    float: left;
+    margin-bottom: 70px;
+}
+
+label {
+    font-size: 20px;
+}
+
+#tags {
+    width: 800px;
+    height: 40px;
+    font-size: 28px;
+    color: indigo;
+}
+
+.se-s {
+    width: 80px;
+    height: 44px;
+    float: right;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+
+/* ****************************************ExcelLoad */
+
+
+/* table {
+            border-collapse: collapse;
+        } */
+
+th,
+td {
+    border: solid 1px #6D6D6D;
+    padding: 5px 10px;
+}
+
+.se-s {
+    background-color: lightblue;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    /* background-color: ; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.modal .modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.tablee {
+    /* 添加属性过后就暂时隐藏元素，因为数据还在里面 */
+    display: none;
+}
+
+.inputt select {
+    font-size: 5px;
+}
+
+#result {
+    float: left;
+}
