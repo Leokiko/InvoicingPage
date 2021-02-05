@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进销存系统</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="jq-ui.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.jpg" alt="美鸣科技">
+            <span>美鸣科技 · 进销存系统</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="left-menu">
+            <dl class="menu">
+                <dt>功能列表</dt>
+                <dd>
+                    <div id="load">
+                        <input type="file" id="file" style="display:none;" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                        <a href="javascript:selectFile()">加载源</a>
+                    </div>
+                </dd>
+                <dd id="list-lib">列表</dd>
+                <dd id="in-lib">
+                    <div>
+                        <input id='fileIn' type="file" style="display:none;" />
+                        <a id="e-in" href="javascript:libIn()">入库</a>
+                    </div>
+                </dd>
+                <dd id="purchase">
+                    <div>
+                        <a id="buy" href="javascript:purchase()">订购单状态</a>
+                    </div>
+                </dd>
+                <dd id="out-lib">
+                    <div>
+                        <input id='fileOut' type="file" style="display:none;" />
+                        <a id="e-out" href="javascript:libOut()">出库</a>
+                    </div>
+                </dd>
+
+                <dd id="lib-search">搜索</dd>
+                <dd>
+                    <div>
+                        <a id="e-save" href="javascript:exportExcel()">下载</a>
+                        <!-- 读取的表格可以直接编辑，编辑后点击保存即可导出excel文件 -->
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div class="right-content">
+            <div class="container">
+                <div class="ui-widget inputt display-none">
+                    <div style="margin-bottom: 10px;">
+                        <label for="tags">请输入搜索内容: </label>
+                    </div>
+                    <!-- <input class="se" type='text' /> -->
+                    <input id="tags">
+                    <!-- <input class="se-s" type='submit' value='搜索' /> -->
+                </div>
+                <div id="result" contenteditable></div>
+                <!-- 让列表可编辑，实现修改功能 -->
+            </div>
+            <!--    存货编号 = 存货ID
+                    存货名称 = 存货名称
+                    存货规格 = 存货存储的规格
+                    存货主计量单位 = 存货存储的计量单位
+                    数量 = 物料现有库存
+                    存货要求可供安全天数 = 物料需要安全维持供应的天数————这是手动设置的
+                    物料平均日消耗 = 保存所有安全天数内的出库数据，并按照队列计算平均值作为平均日消耗————物料平均日消耗初始化为第一次设置的日耗
+                    物料购买等待天数 = 物料购买的等待期
+                    物料月建议采购量 = 物料月初建议计划的采购数量
+                    是否需要采购 = 检车预估可使用天数与安全天数的大小关系，自动设置为“√”（一般）和“√√√”（紧急）
+                    订购状态 = 为空，或者为“是”
+            -->
+        </div>
+    </div>
+    <script src="./js/jq.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/xlsx.full.min.js"></script>
+    <script src="./js/json2.js"></script>
+</body>
+
+</html>
