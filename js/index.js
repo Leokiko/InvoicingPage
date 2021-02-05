@@ -333,6 +333,7 @@ function openDownloadDialog(url, saveName) {
     aLink.dispatchEvent(event);
 }
 
+
 //html load的时候自动运行的代码
 //也是table加载的代码
 $(function() {
