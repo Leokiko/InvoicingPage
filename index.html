@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>进销存系统</title>
+    <title>美鸣科技</title>
     <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="jq-ui.css">
@@ -23,7 +23,7 @@
                 <dt>功能列表</dt>
                 <dd>
                     <div id="load">
-                        <input type="file" id="file" style="display:none;" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                        <input type="file" id="file" style="display:none;" />
                         <a href="javascript:selectFile()">加载源</a>
                     </div>
                 </dd>
@@ -31,12 +31,7 @@
                 <dd id="in-lib">
                     <div>
                         <input id='fileIn' type="file" style="display:none;" />
-                        <a id="e-in" href="javascript:libIn()">入库</a>
-                    </div>
-                </dd>
-                <dd id="purchase">
-                    <div>
-                        <a id="buy" href="javascript:purchase()">订购单状态</a>
+                        <a id="e-in" onclick="libIn()">入库</a>
                     </div>
                 </dd>
                 <dd id="out-lib">
@@ -47,6 +42,13 @@
                 </dd>
 
                 <dd id="lib-search">搜索</dd>
+                <dd id="merge">
+                    <div>
+                        <input id='fileMerge' type="file" style="display:none;" />
+                        <a id="e-merge" href="javascript:mergeExcel()">订购单合并</a>
+                        <!-- 把订购单excel文件合并进源文件 -->
+                    </div>
+                </dd>
                 <dd>
                     <div>
                         <a id="e-save" href="javascript:exportExcel()">下载</a>

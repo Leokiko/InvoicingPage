@@ -13,7 +13,11 @@ body {
     height: 70px;
     width: 100%;
     position: relative;
-    background-color: #354457;
+    background-color: #c5b1b1;
+    background-image: url(./banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position-x: 1500px;
 }
 
 .header span {
@@ -21,6 +25,7 @@ body {
     color: red;
     position: absolute;
     left: 80px;
+    font-weight: 900;
 }
 
 .logo {
@@ -47,7 +52,7 @@ body {
 .content .left-menu {
     width: 170px;
     height: 100%;
-    background-color: #d1d1d1;
+    /* background-color: #d1d1d1; */
     font-size: 14px;
     float: left;
     font-weight: 500;
@@ -57,7 +62,7 @@ body {
 .left-menu dd {
     height: 40px;
     line-height: 40px;
-    margin: 5px 0;
+    margin: 15px 0;
     font-size: 20px;
     color: #2c68a5;
 }
@@ -65,16 +70,21 @@ body {
 .left-menu dt {
     text-align: center;
     font-weight: bold;
+    font-size: 40px;
     margin: 25px 0px;
     color: rgb(63, 212, 37);
-    font-family: 'STXingwei';
+    color: #2aa8d9;
+    border-bottom: 5px solid;
+    font-family: cursive;
     font-size: 40px;
 }
 
 .left-menu dd {
-    border: 1px black solid;
+    /* border: 1px black solid; */
     cursor: pointer;
-    background-color: rgb(192, 188, 196);
+    width: 160px;
+    margin: 10px auto;
+    /* background-color: rgb(192, 188, 196); */
     text-align: center;
 }
 
@@ -88,13 +98,15 @@ body {
 #load a {
     color: #000000;
     font-size: 30px;
-    background-color: #81b2f1;
+    /* background-color: #81b2f1; */
     font-weight: 700;
 }
 
 .left-menu dd:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #354457;
+    background-color: rgba(167, 255, 140, 0.5);
+    /* color: #354457; */
+    border-radius: 50px;
+    font-weight: 900;
 }
 
 .right-content {
@@ -122,6 +134,13 @@ body {
     font-size: 16px;
 } */
 
+table {
+    border-collapse: collapse;
+    /* width: 100%; */
+    border-left: #C8B9AE solid 1px;
+    border-top: #C8B9AE solid 1px;
+}
+
 table thead tr {
     background-color: #e3e8ee;
     color: #646987;
@@ -132,11 +151,25 @@ table tbody {
     background-color: #fff;
 }
 
+table td {
+    /* width: 25%; */
+    border-right: #C8B9AE solid 1px;
+    border-bottom: #C8B9AE solid 1px;
+    padding: 10px 10px 6px;
+}
+
+
+/* 隔行换色 */
+
+tr:nth-child(2n) {
+    background: #eeebeb;
+}
+
 .container {
     display: inline-block;
     margin: 0 auto;
     padding: 20px;
-    min-height: 375px;
+    min-height: 888px;
 }
 
 .inputt {
@@ -169,6 +202,12 @@ label {
 
 .display-none {
     display: none;
+}
+
+.display-bold a {
+    font-weight: bolder;
+    border-radius: 50px;
+    background-color: hotpink;
 }
 
 
